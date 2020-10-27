@@ -1,0 +1,55 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Run",
+      "preLaunchTask": "Build",      
+      "configurations": ["Electron: main", "Electron: renderer"]
+    },
+    {
+      "name": "Run Without Debugging",
+      "preLaunchTask": "Build",
+      "configurations": ["Electron: main"]
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Electron: main",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "${command:electron.getpath}",
+      "runtimeArgs": [
+        "--remote-debugging-port=${config:TMS.options.electron.debug.port}",
+        "${command:rad4.tms.getexpandedoutputpath}"
+      ],
+      "presentation": {
+        "hidden": true
+      },
+      "windows": {
+        "runtimeExecutable": "${workspaceFolder}/.vscode/launch.bat",
+        "runtimeArgs": [
+          "${command:electron.getpath}",
+          "${config:TMS.options.electron.debug.port}",
+          "${command:rad4.tms.getexpandedoutputpath}"
+        ]
+      },
+      "outputCapture": "std"
+    },
+    {
+      "name": "Electron: renderer",
+      "preLaunchTask": "Sleepdelay",
+      "presentation": {
+        "hidden": true
+      },
+      "type": "chrome",
+      "request": "attach",
+      "port": "${config:TMS.options.electron.debug.port}",
+      "webRoot": "${command:rad4.tms.getexpandedoutputpath}",
+      "timeout": "${config:TMS.options.electron.debug.timeout}"
+    }
+  ]
+}
