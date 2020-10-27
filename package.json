@@ -1,28 +1,30 @@
 {
-  "name": "generator-code",
-  "version": "1.3.5",
-  "description": "Yeoman generator for Visual Studio Code Extensions",
+  "name": "generator-tms-web-core",
+  "version": "0.0.1",
+  "description": "Yeoman generator for TMS Web Core",
   "keywords": [
     "yeoman-generator",
+    "tms",
+    "web core",
     "vscode",
     "visual studio",
     "visual studio code",
     "vs code",
-    "extensions"
+    "projects"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Microsoft/vscode-generator-code.git"
+    "url": "https://github.com/qadram/generator-tms-web-core.git"
   },
   "bugs": {
-    "url": "https://github.com/Microsoft/vscode-generator-code/issues"
+    "url": "https://github.com/qadram/generator-tms-web-core/issues"
   },
   "main": "./generators/app/index.js",
-  "homepage": "http://code.visualstudio.com",
+  "homepage": "http://tmssoftware.com",
   "license": "MIT",
   "author": {
-    "name": "VS Code Team",
-    "url": "https://github.com/Microsoft"
+    "name": "TMS Software",
+    "url": "https://github.com/TMS"
   },
   "engines": {
     "node": ">=10.0.0"
