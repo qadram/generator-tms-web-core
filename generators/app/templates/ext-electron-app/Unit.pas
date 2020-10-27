@@ -22,6 +22,6 @@ implementation
 {$R *.dfm}
 
 initialization
-  RegisterClass(%formclass%);
+  RegisterClass(<%= formclass %>);
 
 end.
