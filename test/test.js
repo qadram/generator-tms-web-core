@@ -3,8 +3,6 @@ var path = require('path');
 var assert = require('yeoman-assert')
 var helpers = require('yeoman-test');
 
-var env = require('../generators/app/env');
-
 var fs = require('fs');
 
 function stripComments(content) {
