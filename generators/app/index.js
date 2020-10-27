@@ -7,26 +7,15 @@ const Generator = require('yeoman-generator');
 const yosay = require('yosay');
 
 const path = require('path');
-const env = require('./env');
 
-const colortheme = require('./generate-colortheme');
-const commandjs = require('./generate-command-js');
-const commandts = require('./generate-command-ts ');
-const commandweb = require('./generate-command-web');
-const extensionpack = require('./generate-extensionpack');
-const keymap = require('./generate-keymap');
-const language = require('./generate-language');
-const localization = require('./generate-localization');
-const notebook = require('./generate-notebook-renderer');
-const snippets = require('./generate-snippets');
-const webupdate = require('./generate-web-update');
+const webapp = require('./generate-web-app');
 
 module.exports = class extends Generator {
 
     constructor(args, opts) {
         super(args, opts);
         this.option('projectType', { type: String });
-        this.option('projectName', { type: String });
+        this.option('projectname', { type: String });
 
         this.extensionConfig = Object.create(null);
 
@@ -43,8 +32,7 @@ module.exports = class extends Generator {
 
     async prompting() {
         const tmsGenerators = [
-            commandts, commandjs, colortheme, language, snippets, keymap, extensionpack, localization,
-            commandweb, notebook, webupdate
+            webapp
         ]
 
         // Ask for extension type
@@ -113,11 +101,11 @@ module.exports = class extends Generator {
 
         this.log('');
 
-        this.log('Your project ' + this.extensionConfig.name + ' has been created!');
+        this.log('Your project ' + this.extensionConfig.projectname + ' has been created!');
         this.log('');
         this.log('To start editing with Visual Studio Code, use the following commands:');
         this.log('');
-        this.log('     cd ' + this.extensionConfig.name);
+        this.log('     cd ' + this.extensionConfig.dirname);
         this.log('     code .');
         this.log('');
 

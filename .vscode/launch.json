@@ -14,8 +14,8 @@
             "request": "launch",
             "name": "yeoman code",
             "program": "${workspaceFolder}/node_modules/yo/lib/cli.js",
-            "args": [ "code" ],
-            "cwd": "${workspaceFolder}",
+            "args": [ "tms-web-core" ],
+            "cwd": "${workspaceFolder}/newtestproject",
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
         },

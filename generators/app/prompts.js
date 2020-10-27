@@ -57,6 +57,33 @@ exports.askForExtensionId = (generator, extensionConfig) => {
 }
 
 /**
+ * Ask for extension id ("name" in package.json)
+* @param {import('yeoman-generator')} generator
+* @param {Object} extensionConfig
+*/
+exports.askForProjectName = (generator, extensionConfig) => {
+    let projectname = generator.options['projectname'];
+    if (projectname) {
+        extensionConfig.projectname = projectname;
+        return Promise.resolve();
+    }
+    let def = extensionConfig.projectname;
+    if (!def) {
+        def = '';
+    }
+
+    return generator.prompt({
+        type: 'input',
+        name: 'projectname',
+        message: 'What\'s the name of your project?',
+        default: def,
+        validate: validator.validateProjectName
+    }).then(nameAnswer => {
+        extensionConfig.projectname = nameAnswer.projectname;
+    });
+}
+
+/**
  * Ask for extension description
 * @param {import('yeoman-generator')} generator
 * @param {Object} extensionConfig
