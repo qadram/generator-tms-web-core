@@ -11,6 +11,23 @@
             ]
         },
         {
+            "label": "Install",
+            "type": "build",
+            "operation": "install",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$tmswebcoreerror",
+                "$tmswebcorewarning"
+            ]
+        },
+        {
             "label": "Echo",
             "type": "shell",
             "command": "echo 'Building...'",

@@ -2,7 +2,7 @@
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
+    "version": "0.3.0",
     "configurations": [
         {
             "preLaunchTask": "Build",
@@ -21,6 +21,6 @@
             "url": "http://localhost:${command:rad4.tms.web.port.release}/${command:rad4.tms.getcurrentproject.html.file}",
             "webRoot": "${workspaceFolder}",
             "timeout": 20000
-        }        
+        }
     ]
 }

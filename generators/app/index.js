@@ -12,6 +12,7 @@ const webapp = require('./generate-web-app');
 const consoleapp = require('./generate-console-app');
 const electronapp = require('./generate-electron-app');
 const pwaapp = require('./generate-pwa-app');
+const packageapp = require('./generate-package-app');
 
 module.exports = class extends Generator {
 
@@ -35,7 +36,7 @@ module.exports = class extends Generator {
 
     async prompting() {
         const tmsGenerators = [
-            webapp, consoleapp, electronapp, pwaapp
+            webapp, consoleapp, electronapp, pwaapp, packageapp
         ]
 
         // Ask for extension type

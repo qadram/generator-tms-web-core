@@ -8,7 +8,7 @@ const generators = require("./generators");
 
 module.exports = {
     id: 'ext-console-app',
-    name: 'TMS Web Console Application',
+    name: 'TMS WEB Console Application',
     /**
      * @param {import('yeoman-generator')} generator
      * @param {Object} extensionConfig
