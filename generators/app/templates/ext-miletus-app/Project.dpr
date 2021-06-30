@@ -1,4 +1,4 @@
-program <%= projectname %>;
+﻿program <%= projectname %>;
 
 {$R *.dres}
 

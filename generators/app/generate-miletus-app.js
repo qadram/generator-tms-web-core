@@ -46,12 +46,8 @@ module.exports = {
         generator.fs.copyTpl(generator.sourceRoot() + '/Unit.dfm', extensionConfig.dfmpathsource, extensionConfig);
         generator.fs.copyTpl(generator.sourceRoot() + '/Unit.html', extensionConfig.unithtmlname, extensionConfig);
 
-        generator.fs.copyTpl(generator.sourceRoot() + '/ElectronLinux.png', 'ElectronLinux.png', extensionConfig);
-        generator.fs.copyTpl(generator.sourceRoot() + '/ElectronMac.icns', 'ElectronMac.icns', extensionConfig);
-        generator.fs.copyTpl(generator.sourceRoot() + '/ElectronWindows.ico', 'ElectronWindows.ico', extensionConfig);
-
-        generator.fs.copyTpl(generator.sourceRoot() + '/main.js', 'main.js', extensionConfig);
-        generator.fs.copyTpl(generator.sourceRoot() + '/package.json', 'package.json', extensionConfig);
-
+        generator.fs.copyTpl(generator.sourceRoot() + '/MiletusLinux.png', 'MiletusLinux.png', extensionConfig);
+        generator.fs.copyTpl(generator.sourceRoot() + '/MiletusMac.icns', 'MiletusMac.icns', extensionConfig);
+        generator.fs.copyTpl(generator.sourceRoot() + '/MiletusWindows.ico', 'MiletusWindows.ico', extensionConfig);
     }
 }

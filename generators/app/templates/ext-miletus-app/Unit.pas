@@ -1,10 +1,10 @@
-unit <%= unitname %>;
+﻿unit <%= unitname %>;
 
 interface
 
 uses
   System.SysUtils, System.Classes, JS, Web, WEBLib.Graphics, WEBLib.Controls,
-  WEBLib.Forms, WEBLib.Electron, WEBLib.Dialogs;
+  WEBLib.Forms, WEBLib.Miletus, WEBLib.Dialogs;
 
 type
   <%= formclass %> = class(<%= formbaseclass %>)
