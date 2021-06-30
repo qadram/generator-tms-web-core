@@ -20,6 +20,8 @@ module.exports = {
         //Set the default value for the prompt
         extensionConfig.projectname = path.basename(dprojpath);
 
+        extensionConfig.formbaseclass = 'TMiletusForm';
+
         //Ask for the project name and git support
         await prompts.askForProjectName(generator, extensionConfig);
         await prompts.askForGit(generator, extensionConfig);
