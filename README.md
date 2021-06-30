@@ -1,6 +1,6 @@
-# TMS Web Core Generator
+# TMS WEB Core Generator
 
-This generator uses Yeoman to generate all types of TMS Web Core projects from the command line. It's also used on the Repository Visual Studio Code Extension.
+This generator uses Yeoman to generate all types of TMS WEB Core projects from the command line. It's also used on the Repository Visual Studio Code Extension.
 
 ## Install the Generator
 

@@ -31,7 +31,7 @@ module.exports = class extends Generator {
     async initializing() {
         const cliArgs = this.options['_'];
 
-        this.log(yosay('Welcome to the TMS Web Core generator!'));
+        this.log(yosay('Welcome to the TMS WEB Core generator!'));
     }
 
     async prompting() {
