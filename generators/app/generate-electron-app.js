@@ -19,15 +19,13 @@ module.exports = {
 
         //Set the default value for the prompt
         extensionConfig.projectname = path.basename(dprojpath);
-
-        extensionConfig.formbaseclass = 'TElectronForm';
-
         //Ask for the project name and git support
         await prompts.askForProjectName(generator, extensionConfig);
         await prompts.askForGit(generator, extensionConfig);
 
         //With the project name, set all values needed to expand templates
         generators.initializeExtensionConfig(path.join(process.cwd(),extensionConfig.projectname), extensionConfig);
+        extensionConfig.formbaseclass = 'TElectronForm';
     },
 
     /**
