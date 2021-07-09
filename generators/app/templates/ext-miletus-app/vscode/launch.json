@@ -6,24 +6,24 @@
   "compounds": [
     {
       "name": "Run",
-      "preLaunchTask": "Build",      
-      "configurations": ["Electron: main", "Electron: renderer"]
+      "preLaunchTask": "Build",
+      "configurations": ["Miletus: main", "Miletus: renderer"]
     },
     {
       "name": "Run Without Debugging",
       "preLaunchTask": "Build",
-      "configurations": ["Electron: main"]
+      "configurations": ["Miletus: main"]
     }
   ],
   "configurations": [
     {
-      "name": "Electron: main",
+      "name": "Miletus: main",
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "${command:electron.getpath}",
+      "runtimeExecutable": "${command:miletus.getpath}",
       "runtimeArgs": [
-        "--remote-debugging-port=${config:TMS.options.electron.debug.port}",
+        "--remote-debugging-port=${config:TMS.options.miletus.debug.port}",
         "${command:rad4.tms.getexpandedoutputpath}"
       ],
       "presentation": {
@@ -32,24 +32,24 @@
       "windows": {
         "runtimeExecutable": "${workspaceFolder}/.vscode/launch.bat",
         "runtimeArgs": [
-          "${command:electron.getpath}",
-          "${config:TMS.options.electron.debug.port}",
+          "${command:miletus.getpath}",
+          "${config:TMS.options.miletus.debug.port}",
           "${command:rad4.tms.getexpandedoutputpath}"
         ]
       },
       "outputCapture": "std"
     },
     {
-      "name": "Electron: renderer",
+      "name": "Miletus: renderer",
       "preLaunchTask": "Sleepdelay",
       "presentation": {
         "hidden": true
       },
       "type": "chrome",
       "request": "attach",
-      "port": "${config:TMS.options.electron.debug.port}",
+      "port": "${config:TMS.options.miletus.debug.port}",
       "webRoot": "${command:rad4.tms.getexpandedoutputpath}",
-      "timeout": "${config:TMS.options.electron.debug.timeout}"
+      "timeout": "${config:TMS.options.miletus.debug.timeout}"
     }
   ]
 }
