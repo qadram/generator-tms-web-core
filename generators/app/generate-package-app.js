@@ -26,6 +26,10 @@ module.exports = {
 
         //With the project name, set all values needed to expand templates
         generators.initializeExtensionConfig(path.join(process.cwd(),extensionConfig.projectname), extensionConfig);
+
+        extensionConfig.projectdpr = generators.getUniqueName(process.cwd(), 'Package', 'dpk', true);
+        extensionConfig.projectsource = path.basename(extensionConfig.projectdpr);
+
     },
 
     /**
