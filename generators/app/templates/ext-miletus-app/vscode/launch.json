@@ -22,8 +22,11 @@
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "windows": {
-        "runtimeExecutable": "${command:rad4.tms.getexpandedoutputpath}/${command:rad4.tms.getprojectname}/${command:rad4.tms.getprojectname}.exe"
-        },
+        "runtimeExecutable": "${workspaceFolder}/.vscode/launch.bat",
+        "runtimeArgs": [
+          "${command:rad4.tms.getexpandedoutputpath}\\${command:rad4.tms.getprojectname}.exe"
+        ]
+      },
       "linux": {
         "runtimeExecutable": "${command:rad4.tms.getexpandedoutputpath}/${command:rad4.tms.getprojectname}/${command:rad4.tms.getprojectname}"
         },
