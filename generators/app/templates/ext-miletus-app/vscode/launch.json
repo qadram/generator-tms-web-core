@@ -28,7 +28,7 @@
         ]
       },
       "linux": {
-        "runtimeExecutable": "${command:rad4.tms.getexpandedoutputpath}/${command:rad4.tms.getprojectname}/${command:rad4.tms.getprojectname}"
+        "runtimeExecutable": "${command:rad4.tms.getexpandedoutputpath}/${command:rad4.tms.getprojectname}"
         },
       "osx": {
         "runtimeExecutable": "${command:rad4.tms.getexpandedoutputpath}/${command:rad4.tms.getprojectname}/${command:rad4.tms.getprojectname}.app/Contents/MacOS/Miletus"
