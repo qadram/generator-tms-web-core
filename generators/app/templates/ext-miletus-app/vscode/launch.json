@@ -7,7 +7,7 @@
     {
       "name": "Run",
       "preLaunchTask": "Build",
-      "configurations": ["Miletus: main", "Miletus: renderer"]
+      "configurations": ["Miletus: main"]
     },
     {
       "name": "Run Without Debugging",
@@ -21,35 +21,19 @@
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "${command:miletus.getpath}",
-      "runtimeArgs": [
-        "--remote-debugging-port=${config:TMS.options.miletus.debug.port}",
-        "${command:rad4.tms.getexpandedoutputpath}"
-      ],
+      "windows": {
+        "runtimeExecutable": "${command:rad4.tms.getexpandedoutputpath}/${command:rad4.tms.getprojectname}/${command:rad4.tms.getprojectname}.exe"
+        },
+      "linux": {
+        "runtimeExecutable": "${command:rad4.tms.getexpandedoutputpath}/${command:rad4.tms.getprojectname}/${command:rad4.tms.getprojectname}"
+        },
+      "osx": {
+        "runtimeExecutable": "${command:rad4.tms.getexpandedoutputpath}/${command:rad4.tms.getprojectname}/${command:rad4.tms.getprojectname}.app/Contents/MacOS/Miletus"
+      },
       "presentation": {
         "hidden": true
-      },
-      "windows": {
-        "runtimeExecutable": "${workspaceFolder}/.vscode/launch.bat",
-        "runtimeArgs": [
-          "${command:miletus.getpath}",
-          "${config:TMS.options.miletus.debug.port}",
-          "${command:rad4.tms.getexpandedoutputpath}"
-        ]
       },
       "outputCapture": "std"
-    },
-    {
-      "name": "Miletus: renderer",
-      "preLaunchTask": "Sleepdelay",
-      "presentation": {
-        "hidden": true
-      },
-      "type": "chrome",
-      "request": "attach",
-      "port": "${config:TMS.options.miletus.debug.port}",
-      "webRoot": "${command:rad4.tms.getexpandedoutputpath}",
-      "timeout": "${config:TMS.options.miletus.debug.timeout}"
     }
   ]
 }
