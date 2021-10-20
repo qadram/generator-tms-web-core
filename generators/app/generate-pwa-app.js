@@ -47,8 +47,8 @@ module.exports = {
         generator.fs.copyTpl(generator.sourceRoot() + '/Unit.html', extensionConfig.unithtmlname, extensionConfig);
 
         generator.fs.copyTpl(generator.sourceRoot() + '/IconResHigh.png', 'IconResHigh.png', extensionConfig);
-        generator.fs.copyTpl(generator.sourceRoot() + '/IconResHigh.png', 'IconResHigh.png', extensionConfig);
-        generator.fs.copyTpl(generator.sourceRoot() + '/IconResHigh.png', 'IconResHigh.png', extensionConfig);
+        generator.fs.copyTpl(generator.sourceRoot() + '/IconResLow.png', 'IconResLow.png', extensionConfig);
+        generator.fs.copyTpl(generator.sourceRoot() + '/IconResMid.png', 'IconResMid.png', extensionConfig);
 
         generator.fs.copyTpl(generator.sourceRoot() + '/Manifest.json', 'Manifest.json', extensionConfig);
         generator.fs.copyTpl(generator.sourceRoot() + '/ServiceWorker.js', 'ServiceWorker.js', extensionConfig);

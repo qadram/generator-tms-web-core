@@ -30,6 +30,17 @@ module.exports = {
         extensionConfig.projectdpr = generators.getUniqueName(process.cwd(), 'Package', 'dpk', true);
         extensionConfig.projectsource = path.basename(extensionConfig.projectdpr);
 
+        extensionConfig.unitpath = '';
+        extensionConfig.unitname = '';
+        extensionConfig.unitsource = '';
+        extensionConfig.formname = '';
+        extensionConfig.formbaseclass = '';
+        extensionConfig.formclass = '';
+        extensionConfig.dfmpath = '';
+        extensionConfig.dfmpathsource = '';
+        extensionConfig.unithtml = '';
+        extensionConfig.unithtmlname = '';
+        extensionConfig.unithtmlsource = '';
     },
 
     /**
