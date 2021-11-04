@@ -87,10 +87,32 @@
             ]
         },
         {
-            "label": "Build-MacOS64",
+            "label": "Build-MacOS64-Intel",
             "type": "build",
             "operation": "compile",
-            "buildconfiguration": "Build-MacOS64",
+            "buildconfiguration": "Build-MacOS64-Intel",
+            "group": "build",
+            "problemMatcher": [
+                "$tmswebcoreerror",
+                "$tmswebcorewarning"
+            ]
+        },
+        {
+            "label": "Build-MacOS64-ARM",
+            "type": "build",
+            "operation": "compile",
+            "buildconfiguration": "Build-MacOS64-ARM",
+            "group": "build",
+            "problemMatcher": [
+                "$tmswebcoreerror",
+                "$tmswebcorewarning"
+            ]
+        },
+        {
+            "label": "Build-Raspberry-Pi",
+            "type": "build",
+            "operation": "compile",
+            "buildconfiguration": "Build-Raspberry-Pi",
             "group": "build",
             "problemMatcher": [
                 "$tmswebcoreerror",
