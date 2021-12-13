@@ -27,17 +27,8 @@ module.exports = {
         //With the project name, set all values needed to expand templates
         generators.initializeExtensionConfig(path.join(process.cwd(),extensionConfig.projectname), extensionConfig);
 
-        extensionConfig.unitpath = '';
-        extensionConfig.unitname = '';
-        extensionConfig.unitsource = '';
-        extensionConfig.formname = '';
-        extensionConfig.formbaseclass = '';
-        extensionConfig.formclass = '';
-        extensionConfig.dfmpath = '';
-        extensionConfig.dfmpathsource = '';
-        extensionConfig.unithtml = '';
-        extensionConfig.unithtmlname = '';
-        extensionConfig.unithtmlsource = '';
+        extensionConfig.formbaseclass = 'TObject';
+        extensionConfig.formclass = 'TMyTestClassUnit1';
 
     },
 
