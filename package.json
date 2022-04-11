@@ -1,6 +1,6 @@
 {
   "name": "generator-tms-web-core",
-  "version": "0.0.18",
+  "version": "0.0.20",
   "description": "Yeoman generator for TMS WEB Core",
   "keywords": [
     "yeoman-generator",
