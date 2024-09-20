@@ -102,6 +102,8 @@
             <DesignClass>TWebForm</DesignClass>
         </DCCReference>
         <None Include="<%= projecthtmlsource %>"/>
+        <None Include="bootstrap.min.css"/>
+        <None Include="bootstrap.bundle.min.js"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -131,6 +133,18 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="<%= projecthtmlsource %>" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="bootstrap.bundle.min.js" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="bootstrap.min.css" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
