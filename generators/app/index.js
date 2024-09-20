@@ -9,6 +9,7 @@ const yosay = require('yosay');
 const path = require('path');
 
 const webapp = require('./generate-web-app');
+const boostrapapp = require('./generate-bootstrap-app');
 const consoleapp = require('./generate-console-app');
 const electronapp = require('./generate-electron-app');
 const pwaapp = require('./generate-pwa-app');
@@ -38,7 +39,7 @@ module.exports = class extends Generator {
 
     async prompting() {
         const tmsGenerators = [
-            webapp, consoleapp, electronapp, pwaapp, packageapp, miletusapp, testapp
+            webapp, boostrapapp, consoleapp, electronapp, pwaapp, packageapp, miletusapp, testapp
         ]
 
         // Ask for extension type
